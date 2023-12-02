@@ -1,0 +1,202 @@
+body {
+    text-align: center;
+    background-color: #333;
+    color: #ddd;
+}
+
+/*Barra de Navegación*/
+
+header {
+    background-color: rgb(216, 5, 5);
+    color: #ddd;
+    padding-bottom: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffee00
+}
+
+/*Catalogo*/
+
+.container-fluid {
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.5s;
+}
+
+li a:hover {
+    color:#ffee00
+}
+
+/*Indice del Catalogo*/
+
+.container-indice {
+    display: flex;
+    background: steelblue;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+div h2 {
+    text-align: center;
+    padding-right: 20px;
+}
+
+div a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.5s;
+}
+
+div a:hover {
+    color: #ffee00;
+}
+
+/*Consulta debajo del catalogo*/
+
+.Debajo {
+    background-color: #ddd;
+    color:red
+}
+
+/*Aside o Anuncio*/
+
+aside {
+    background-color: green;
+    color: #ffee00;
+}
+
+aside p {
+    text-align: center;
+}
+
+aside a {
+    transition: color 0.5s;
+}
+
+aside a:hover {
+    color: red;
+}
+/*GRID*/
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px
+}
+
+.poduct-grid {
+    display: grid;
+    grid-template-areas:
+    "Sobre Sobre"
+    "Scatalogo Scontactos";
+}
+
+.Sobre {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+#Sobre {
+    grid-area: Sobre;
+}
+
+#Scatalogo {
+    grid-area: Scatalogo;
+}
+
+#Scontactos {
+    grid-area: Scontactos;
+}
+
+/*Formulario*/
+
+section {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-section {
+    text-align: center;
+    background-color: #ddd;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width:100%
+}
+
+/*Footer*/
+
+footer {
+    background-color: #aaa;
+    color: black;
+}
+
+/*Dispositivos pequeños (400px o menor)*/
+
+@media screen and (max-width:400px) {
+    main {
+        grid-template-columns: 100%;
+    }
+    .poduct-grid {
+        grid-template-areas: 
+        "Sobre"
+        "Scatalogo"
+        "Scontactos";
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+}
